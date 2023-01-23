@@ -304,4 +304,3 @@ dependencies:
       - validators==0.20.0
       - watchdog==2.2.1
       - zipp==3.11.0
-prefix: /home/edsaa/.conda/envs/pg
