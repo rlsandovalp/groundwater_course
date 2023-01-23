@@ -6,6 +6,10 @@ from pygimli.viewer.mpl import drawStreams, drawStreamLines
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
+
+from os import system
+system("conda activate pg")
+
 st.set_page_config(page_title="Horizontal flow", page_icon="🌵")
 
 ## Domain extent
