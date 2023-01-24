@@ -28,7 +28,7 @@ geometry = world + zone_A + zone_B + zone_C
 "## Meshing"
 with st.sidebar:
     with st.expander("Meshing controls", expanded=False):
-        mesh_quality = st.slider("Mesh quality", min_value=20, max_value=120, value=34, step=1, help="Minimum angle constraint") 
+        mesh_quality = st.slider("Mesh quality", min_value=10, max_value=40, value=34, step=1, help="Minimum angle constraint") 
         mesh_area    = st.slider("Mesh area", min_value=5, max_value=30, value=15, step=1, help="Maximum element size (global)") 
 
 mesh = mt.createMesh(geometry, quality =mesh_quality, area=mesh_area, smooth=True)
