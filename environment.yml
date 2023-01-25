@@ -63,7 +63,4 @@ dependencies:
   - asttokens
   - ipykernel
   - streamlit
-  - pip
-  - pip:
-    - streamlit
-prefix: /home/appuser/venv/
+prefix: /home/appuser/venv
