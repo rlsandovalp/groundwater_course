@@ -63,4 +63,5 @@ dependencies:
   - readline
   - asttokens
   - ipykernel
+  - streamlit
 prefix: /home/edsaa/.conda/envs/pg
