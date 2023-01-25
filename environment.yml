@@ -38,7 +38,6 @@ dependencies:
   - python=3.9
   - platformdirs
   - tk
-  - pip
   - packaging
   - tornado
   - setuptools
@@ -64,4 +63,7 @@ dependencies:
   - asttokens
   - ipykernel
   - streamlit
+  - pip
+  - pip:
+    - streamlit
 prefix: /home/edsaa/.conda/envs/pg
