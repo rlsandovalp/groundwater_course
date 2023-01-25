@@ -25,9 +25,9 @@ zone_B = mt.createPolygon([[-10,-50], [20,-50], [50,50], [20,50]], isClosed=True
 zone_C = mt.createPolygon([[-100,50], [20,50], [0,70], [-100,60]], isClosed=True, marker = 3)
 geometry = world + zone_A + zone_B + zone_C
 
-"## Meshing"
+"## 🕸️ Meshing"
 with st.sidebar:
-    with st.expander("Meshing controls", expanded=False):
+    with st.expander("🎛️ Meshing controls", expanded=False):
         mesh_quality = st.slider("Mesh quality", min_value=10, max_value=40, value=34, step=1, help="Minimum angle constraint") 
         mesh_area    = st.slider("Mesh area", min_value=5, max_value=30, value=15, step=1, help="Maximum element size (global)") 
 
@@ -45,9 +45,9 @@ fig, ax = plt.subplots()
 pg.show(mesh, markers = True, showMesh = True, ax=ax)
 st.pyplot(fig)
 
-"## Assign hydraulic conductivity to regions"
+"## 🗺️ Assign hydraulic conductivity to regions"
 with st.sidebar:
-    with st.expander("Hydraulic conductivities", expanded=False):
+    with st.expander("🎛️ Hydraulic conductivities", expanded=False):
         K_kwargs = dict(min_value=1.0, max_value=20.0, value=3.0, step=0.5, help="Hydraulic conductivity (m/day)")
         K_values = [st.number_input(f"Zone {i} (m/day)", **K_kwargs) for i in range(1,5)]
 
@@ -61,13 +61,13 @@ showMesh(mesh, kMap, label='$K$ [m/day]', ax=ax)
 st.pyplot(fig)
 
 
-"## Set boundary conditions"
+"## 🧱 Set boundary conditions"
 ## Set boundary conditions
 dirichletBC = {
     -3: st.number_input("Left-side head value (m)", min_value=0, max_value=100, value=60, step=1),
     -4: st.number_input("Right-side head value (m)", min_value=0, max_value=100, value=40, step=1)}
 
-"## Results"
+"## 🧮 Results"
 with st.spinner("Solving system..."):
     h = pg.solve(mesh, a = kMap, bc={'Dirichlet': dirichletBC}, verbose = True)
     vel = -pg.solver.grad(mesh, h) * kArray
