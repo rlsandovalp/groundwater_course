@@ -1,4 +1,4 @@
-name: pg
+name: venv
 channels:
   - gimli
   - conda-forge
@@ -63,4 +63,4 @@ dependencies:
   - asttokens
   - ipykernel
   - streamlit
-prefix: /home/appuser/venv
+prefix: /home/appuser/
