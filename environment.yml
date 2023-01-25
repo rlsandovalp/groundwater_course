@@ -66,4 +66,4 @@ dependencies:
   - pip
   - pip:
     - streamlit
-prefix: /home/edsaa/.conda/envs/pg
+prefix: /home/appuser/venv/
